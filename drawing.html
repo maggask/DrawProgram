@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Drawing</title>
+		<link href="css/drawingStyle.css" rel="stylesheet" />
+		<script src="js/base.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+		<script src="js/shapeClasses.js"></script>
+		<script src="js/drawingApp.js"></script>
+	</head>
+	<body>
+		<!--Buttons to manipulate shapes, undo, redo and clear-->
+		<div id="shapes">
+			<button id="pen" class="drawingTool" data-constructor="Pen">
+				<img src = "images/pen.png" alt = "Freehand drawing" height="42" width="42" />
+			</button>
+			<button id="line" class="drawingTool" data-constructor="Line">
+				<img src = "images/line.png" alt = "Draw line" height="42" width="42" />
+			</button>
+			<button id="circle" class="drawingTool" data-constructor="Circle">
+				<img src = "images/circle.png" alt = "Draw circle" height="42" width="42" />
+			</button>
+			<button id="rectangle" class="drawingTool" data-constructor="Rectangle">
+				<img src = "images/rectangle.png" alt = "Draw rectangle" height="42" width="42" />
+			</button>
+			<button id="text" class="drawingTool" data-constructor="Texti">
+				<img src = "images/text.png" alt = "write text" height="42" width="42" />
+			</button>
+			<input id="textBox" type="text" style="display:none" />
+			<span id="undoRedo">
+				<button id="undo">
+					<img src = "images/undo.png" alt = "Undo changes" height="42" width="42" />
+				</button>
+				<button id="redo">
+					<img src = "images/redo.png" alt = "Redo changes" height="42" width="42" />
+				</button>
+				<button id="clearButton"><img src = "images/clear.png" alt = "Undo changes" height="42" width="42" /></button>
+			</span>
+		</div>
+		
+		<!--Canvas area-->
+		<canvas id="drawCanvas" width="560" height="500"></canvas>
+		
+		<!--Buttons to manipulate colours and pensize-->
+		<div id="colourAndSize">
+			<ul id="size">
+				<h2>Pen size:</h2>
+				<li>
+					<button class="size" id="large" data-constructor="5">
+						<img src = "images/plus.png" alt = "Make pen thicker" height="42" width="42"/>
+					</button>
+				</li>
+				<li>
+					<button class="size" id="medium" data-constructor="3">Default</button>
+				</li>
+				<li>
+					<button class="size" id="small" data-constructor="1">
+						<img src = "images/minus.png" alt = "Make pen thinner" height="42" width="42" />
+					</button>
+				</li>
+			</ul>	
+			<ul id="colour">
+				<h2>Pen colour:</h2>
+				<li>
+					<button id="black" class="colour" data-constructor="'black'">
+						Black
+					</button>
+				</li>
+				<li>
+					<button id="blue" class="colour" data-constructor="'blue'">
+						Blue
+					</button>
+				</li>
+				<li>
+					<button id="red" class="colour" data-constructor="'red'">
+						Red
+					</button>
+				</li>
+				<li>
+					<button id="green" class="colour" data-constructor="'green'">
+						Green
+					</button>
+				</li>
+			</ul>	
+		</div>
+
+		<!--Buttons to save picture and upload to canvas, upload function not ready-->
+		<div id="saveUpload">
+			<button id="save">
+				<img src = "images/save.png" alt = "Save image" height="42" width="42" />
+			</button>
+			<button id="upload">
+				<img src = "images/upload.png" alt = "Upload image" height="42" width="42" />
+			</button>
+		</div>
+	</body>
+</html>

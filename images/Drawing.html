@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///home/gaialar/Dropbox/Verkefni/fourthSemester/WEPO/project1/drawing.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>Drawing</title>
+		<link href="file:///home/gaialar/Dropbox/Verkefni/fourthSemester/WEPO/project1/css/drawingStyle.css" rel="stylesheet">
+		<script src="./Drawing_files/base.js"></script>
+		<script src="./Drawing_files/jquery.js"></script>
+		<script src="./Drawing_files/shapeClasses.js"></script>
+		<script src="./Drawing_files/drawingApp.js"></script>
+	</head>
+	<body style="">
+		<div id="shapes">
+			<button id="pen" class="drawingTool" data-constructor="Pen">
+				<img src="./Drawing_files/pen.png" alt="Freehand drawing" height="42" width="42">
+			</button>
+			<button id="line" class="drawingTool" data-constructor="Line">
+				<img src="./Drawing_files/line.png" alt="Draw line" height="42" width="42">
+			</button>
+			<button id="circle" class="drawingTool" data-constructor="Circle">
+				<img src="./Drawing_files/circle.png" alt="Draw circle" height="42" width="42">
+			</button>
+			<button id="rectangle" class="drawingTool" data-constructor="Rectangle">
+				<img src="./Drawing_files/rectangle.png" alt="Draw rectangle" height="42" width="42">
+			</button>
+			<button id="text" class="drawingTool" data-constructor="Texti">
+				<img src="./Drawing_files/text.png" alt="write text" height="42" width="42">
+			</button>
+			<input id="textBox" type="text" style="top: 239px; left: 326px;">
+			<span id="undoRedo">
+				<button id="undo"><img src="./Drawing_files/undo.png" alt="Undo changes" height="42" width="42"></button>
+				<button id="redo"><img src="./Drawing_files/redo.png" alt="Redo changes" height="42" width="42"></button>
+				<button id="clearButton"><img src="./Drawing_files/clear.png" alt="Undo changes" height="42" width="42"></button>
+			</span>
+		</div>
+		
+		<canvas id="drawCanvas" width="560" height="500"></canvas>
+		<div id="colourAndSize">
+			<ul id="size">
+				<h2>Pen size:</h2>
+				<li>
+					<button class="size" id="large" data-constructor="5">
+						<img src="./Drawing_files/plus.png" alt="Make pen thicker" height="42" width="42">
+					</button>
+				</li>
+				<li>
+					<button class="size" id="medium" data-constructor="3">Default</button>
+				</li>
+				<li>
+					<button class="size" id="small" data-constructor="1">
+						<img src="./Drawing_files/minus.png" alt="Make pen thinner" height="42" width="42">
+					</button>
+				</li>
+			</ul>	
+			<ul id="colour">
+				<h2>Pen colour:</h2>
+				<li>
+					<button id="black" class="colour" data-constructor="&#39;black&#39;">
+						Black
+					</button>
+				</li>
+				<li>
+					<button id="blue" class="colour" data-constructor="&#39;blue&#39;">
+						Blue
+					</button>
+				</li>
+				<li>
+					<button id="red" class="colour" data-constructor="&#39;red&#39;">
+						Red
+					</button>
+				</li>
+				<li>
+					<button id="green" class="colour" data-constructor="&#39;green&#39;">
+						Green
+					</button>
+				</li>
+			</ul>	
+		</div>
+
+	
+</body></html>
